@@ -1,0 +1,39 @@
+{
+	"name": "Tag",
+	"tree": {
+		"$className": "DataModel",
+
+		"HttpService": {
+			"$className": "HttpService",
+			"$properties": {
+				"HttpEnabled": true
+			}
+		},
+
+		"ReplicatedStorage": {
+			"$className": "ReplicatedStorage",
+
+			"TestEz": {
+				"$path": "modules/testez/lib"
+			},
+
+			"Tag": {
+				"$path": "lib"
+			}
+		},
+
+		"ServerScriptService": {
+			"$className": "ServerScriptService",
+			"TestRunner": {
+				"$path": "test-runner.server.lua"
+			}
+		},
+
+		"Players":{
+			"$className": "Players",
+			"$properties": {
+				"CharacterAutoLoads": false
+			}
+		}
+	}
+}

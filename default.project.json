@@ -24,15 +24,13 @@
 
 		"ServerScriptService": {
 			"$className": "ServerScriptService",
+
+			"Example": {
+				"$path": "example"
+			},
+
 			"TestRunner": {
 				"$path": "test-runner.server.lua"
-			}
-		},
-
-		"Players":{
-			"$className": "Players",
-			"$properties": {
-				"CharacterAutoLoads": false
 			}
 		}
 	}

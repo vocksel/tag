@@ -196,8 +196,8 @@ return function()
 
 		-- This is hard to test because we're dealing with an event. It would
 		-- require mocking out _onAddedSignal so we could examine it, which is
-		-- quite a bit of effort. For now we're relying on "yeah I tested it on
-		-- my end" as the test for this bit.
+		-- quite a bit of effort. For now we're relying on manual testing to
+		-- make sure it works.
 		itSKIP("should error when an instance added with the tag doesn't check", function() end)
 	end)
 

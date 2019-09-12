@@ -1,15 +1,39 @@
 # Tag
 
-Wrapper around the concept of Tags that CollectionService uses.
+This class allows you to create a CollectionService tag and quickly add/remove
+it on instances. It also allows you to enforce types for what each tag is
+applied to.
 
-CollectionService works purely off of strings, making it hard to keep track of
-tags. It's common to create a table of constants and reference each tag that
-way. This is a good approach, but when you need constants and inline checks your
-conditions get unwieldy.
+```lua
+local tags = {
+	-- Using t, we enforce that a Character is a model.
+	Character = Tag.new("Character", t.instanceOf("Model")),
+
+    IsAlive = Tag.new("IsAlive"),
+}
+
+-- You can apply the Character tag to anything, even NPCs, and they will all be
+-- handled here. This makes it easy to write code around different entities.
+tags.Character:onAdded(function(character)
+    print(character, "added")
+end)
+
+game.Players.PlayerAdded:Connect(function(player)
+    player.CharacterAdded:Connect(function(character)
+        tags.Character:add(character)
+        tags.IsAlive:add(character)
+
+        local humanoid = character:WaitForChild("Humanoid")
+        humanoid.Died:Connect(function()
+            tags.IsAlive:remove(character)
+        end)
+    end)
+end)
+```
 
 Each Tag instance has methods that wrap around the CollectionService API, so you
 can quickly reference a tag and then perform operations with the context of the
-tag, instead of having to pass in a constant to CollectionService.
+tag, instead of having to pass in a string constant to CollectionService.
 
 ## Constructors
 

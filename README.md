@@ -6,8 +6,8 @@ applied to.
 
 ```lua
 local tags = {
-	-- Using t, we enforce that a Character is a model.
-	Character = Tag.new("Character", t.instanceOf("Model")),
+    -- Using t, we enforce that a Character is a model.
+    Character = Tag.new("Character", t.instanceOf("Model")),
 
     IsAlive = Tag.new("IsAlive"),
 }

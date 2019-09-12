@@ -12,6 +12,12 @@ return function()
 			expect(tag.name).to.equal("Foo")
 		end)
 
+		it("should return the name when coercing into a string", function()
+			local tag = Tag.new("Foo")
+
+			expect(tostring(tag)).to.equal("Foo")
+		end)
+
 		-- Skipping this idea for the time being. Nesting tags in this way seems
 		-- like an anti-pattern at first glance,
 

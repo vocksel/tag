@@ -121,7 +121,7 @@ return function()
 		end)
 	end)
 
-	describe("getInstances()", function()
+	describe("getTagged()", function()
 		it("should get all the instances the tag is applied to", function()
 			local tag = Tag.new("Foo")
 			local instances = {}
@@ -136,7 +136,7 @@ return function()
 				table.insert(instances, instance)
 			end
 
-			expect(#tag:getInstances()).to.equal(3)
+			expect(#tag:getTagged()).to.equal(3)
 
 			for _, instance in ipairs(instances) do
 				instance:Destroy()

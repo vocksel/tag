@@ -75,7 +75,7 @@ Removes the tag from the instance. Same as `CollectionService:RemoveTag()`.
 Toggles the tag on the instance. If the tag is added, it will be removed, and
 vice versa.
 
-**`Tag:getInstances(): Instance[]`**
+**`Tag:getTagged(): Instance[]`**
 
 Gets all of the instances with this tag. Samne as `CollectionService:GetTagged()`.
 

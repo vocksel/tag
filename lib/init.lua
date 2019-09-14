@@ -54,7 +54,7 @@ function Tag:toggle(instance)
 	end
 end
 
-function Tag:getInstances()
+function Tag:getTagged()
 	return CollectionService:GetTagged(self.name)
 end
 

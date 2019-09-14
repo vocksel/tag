@@ -33,8 +33,6 @@ function Tag:_maybeCheck(instance)
 end
 
 function Tag:has(instance)
-	self:_maybeCheck(instance)
-
     return CollectionService:HasTag(instance, self.name)
 end
 
@@ -45,14 +43,10 @@ function Tag:add(instance)
 end
 
 function Tag:remove(instance)
-	self:_maybeCheck(instance)
-
 	return CollectionService:RemoveTag(instance, self.name)
 end
 
 function Tag:toggle(instance)
-	self:_maybeCheck(instance)
-
 	if self:has(instance) then
 		self:remove(instance)
 	else

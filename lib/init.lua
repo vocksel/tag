@@ -71,7 +71,7 @@ function Tag:onAdded(callback)
 
 	for _, instance in ipairs(CollectionService:GetTagged(self.name)) do
 		self:_maybeCheck(instance)
-        onAdded(instance)
+		coroutine.wrap(onAdded)(instance)
     end
 
     return onInstanceAddedConn

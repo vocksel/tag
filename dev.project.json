@@ -2,35 +2,20 @@
 	"name": "Tag",
 	"tree": {
 		"$className": "DataModel",
-
-		"HttpService": {
-			"$className": "HttpService",
-			"$properties": {
-				"HttpEnabled": true
-			}
-		},
-
 		"ReplicatedStorage": {
-			"$className": "ReplicatedStorage",
-
-			"TestEz": {
-				"$path": "modules/testez/lib"
-			},
-
-			"Tag": {
-				"$path": "lib"
+			"Packages": {
+				"$path": "Packages",
+				"Tag": {
+					"$path": "lib"
+				}
 			}
 		},
-
 		"ServerScriptService": {
-			"$className": "ServerScriptService",
-
-			"Example": {
+			"example": {
 				"$path": "example"
 			},
-
-			"TestRunner": {
-				"$path": "test-runner.server.lua"
+			"tests": {
+				"$path": "tests"
 			}
 		}
 	}

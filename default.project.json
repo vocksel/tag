@@ -1,22 +1,6 @@
 {
 	"name": "Tag",
 	"tree": {
-		"$className": "DataModel",
-		"ReplicatedStorage": {
-			"Packages": {
-				"$path": "Packages",
-				"Tag": {
-					"$path": "lib"
-				}
-			}
-		},
-		"ServerScriptService": {
-			"example": {
-				"$path": "example"
-			},
-			"tests": {
-				"$path": "tests"
-			}
-		}
+		"$path": "lib"
 	}
 }

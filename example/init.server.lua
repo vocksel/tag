@@ -1,8 +1,8 @@
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local t = require(ReplicatedStorage.Tag.t)
-local Tag = require(ReplicatedStorage.Tag)
+local t = require(ReplicatedStorage.Packages.t)
+local Tag = require(ReplicatedStorage.Packages.Tag)
 
 local tags = {
 	Character = Tag.new("Character", t.instanceOf("Model")),

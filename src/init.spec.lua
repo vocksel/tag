@@ -1,7 +1,7 @@
 return function()
 	local CollectionService = game:GetService("CollectionService")
 
-	local t = require(script.Parent.t)
+	local t = require(script.Parent.Parent.t)
 	local Tag = require(script.Parent)
 
 	describe("new()", function()

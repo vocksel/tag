@@ -1,0 +1,20 @@
+[package]
+name = "vocksel/tag"
+description = "Class to make tagging instances easy and typesafe"
+version = "0.2.0"
+license = "MIT"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+exclude = ["*"]
+include = [
+    "src",
+    "src/**",
+    "default.project.json",
+    "LICENSE",
+    "README.md",
+    "wally.toml",
+]
+
+[dependencies]
+t = "osyrisrblx/t@3.0.0"
+TestEZ = "roblox/testez@0.4.1"

@@ -1,7 +1,6 @@
 [package]
 name = "vocksel/tag"
-description = "Module loader class that bypasses Roblox's require cache"
-version = "0.1.1"
+description = "Class to make tagging instances easy and typesafe"
 license = "MIT"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"

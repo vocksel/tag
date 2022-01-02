@@ -1,6 +1,6 @@
 {
 	"name": "Tag",
 	"tree": {
-		"$path": "lib"
+		"$path": "src"
 	}
 }

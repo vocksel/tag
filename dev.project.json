@@ -6,7 +6,7 @@
 			"Packages": {
 				"$path": "Packages",
 				"Tag": {
-					"$path": "lib"
+					"$path": "src"
 				}
 			}
 		},

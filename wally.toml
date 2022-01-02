@@ -7,8 +7,8 @@ registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 exclude = ["*"]
 include = [
-    "lib",
-    "lib/**",
+    "src",
+    "src/**",
     "default.project.json",
     "LICENSE",
     "README.md",

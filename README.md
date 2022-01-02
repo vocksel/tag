@@ -37,7 +37,7 @@ tag, instead of having to pass in a string constant to CollectionService.
 
 ## Constructors
 
-**`Tag.new(name: string, instanceCheck?: function): Tag`**
+**`Tag.new(name: string, instanceCheck?: (Instance) -> booleean)): Tag`**
 
 Creates a new tag instance. The `name` is the exact tag name that will be used
 by CollectionService. This is so level designers can easily parse the tags and
@@ -49,7 +49,7 @@ add them to instances in-game.
 
 The name supplied when constructing the tag.
 
-**`Tag.instanceCheck: function | nil`**
+**`Tag.instanceCheck: ((Instance) -> boolean)?`**
 
 Typically this will be a [t](https://github.com/osyrisrblx/t) typechecker.
 Optional function that will be used to check if the instances that get passed
@@ -75,11 +75,11 @@ Removes the tag from the instance. Same as `CollectionService:RemoveTag()`.
 Toggles the tag on the instance. If the tag is added, it will be removed, and
 vice versa.
 
-**`Tag:getTagged(): Instance[]`**
+**`Tag:getTagged(): { Instance }`**
 
 Gets all of the instances with this tag. Samne as `CollectionService:GetTagged()`.
 
-**`onAdded(callback: function): RBXScriptConnection`**
+**`Tag:onAdded(callback: (Instance) -> nil): RBXScriptConnection`**
 
 Runs `callback` any time an instance is added with this tag. This is the same as
 `GetInstanceAddedSignal`.
@@ -89,7 +89,7 @@ instances that are already in the game with the tag.
 
 Returns the connection to `GetInstanceAddedSignal`.
 
-**`onRemoved(callback: function): RBXScriptConnection`**
+**`Tag:onRemoved(callback: (Instance) -> nil): RBXScriptConnection`**
 
 Runs `callback` any time the tag is removed from an instance. This is the same
 as `GetInstanceRemovedSignal`.

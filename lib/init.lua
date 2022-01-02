@@ -1,6 +1,6 @@
 local CollectionService = game:GetService("CollectionService")
 
-local t = require(script.t)
+local t = require(script.Parent.t)
 
 local Tag = {}
 Tag.__index = Tag
